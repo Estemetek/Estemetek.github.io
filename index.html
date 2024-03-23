@@ -10,9 +10,20 @@
     <link rel="canonical" href="http://aldi.github.io/bulma-social">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css">
+
+    <!-- style -->
+    <style>
+        .hidden {
+          display: none;
+        }
+        
+        .clickable {
+          cursor: pointer;
+        }
+      </style>
 </head>
 <body>
-    <section class="section">
+    <section class="section pb-3">
         <div class="container is-flex is-justify-content-center is-flex-direction-row">  
             <div class="mr-5">
                 <figure class="image is-flex is-justify-content-left is-flex-direction-row">
@@ -24,13 +35,16 @@
                 <p class="subtitle">Tech Learner</p>
                 
                 <!-- put links for social media -->
+                <div>
+                    Reach me through:
+                </div>
                 <div class="is-flex is-flex-direction-row">
                     <a class="button is-medium is-facebook">
                         <span class="icon">
                           <i class="fab fa-facebook fa-lg"></i>
                         </span>
                     </a>
-                    <a class="button is-medium is-github">
+                    <a href="https://github.com/Estemetek" target="_blank" class="button is-medium is-github">
                         <span class="icon">
                           <i class="fab fa-github fa-lg"></i>
                         </span>
@@ -40,7 +54,7 @@
                           <i class="fab fa-instagram fa-lg"></i>
                         </span>
                     </a>
-                    <a class="button is-medium is-linkedin">
+                    <a href="www.linkedin.com/in/eunice-mekhaela-estimada-b5a285243" target="_blank" class="button is-medium is-linkedin">
                         <span class="icon">
                           <i class="fab fa-linkedin fa-lg"></i>
                         </span>
@@ -60,6 +74,100 @@
         </div>
     </section> 
 
+    <section class="section pt-3 pb-1 px-1">
+        <div class="columns">
+            <div class="column is-three-fifths is-offset-one-fifth">
+                <div class="container is-flex is-justify-content-center has-text-centered is-flex-direction-column">
+                    <div class="p-0" id="notify">
+                        Click to hide me!
+                    </div>
+                    <h1 class="title pb-3 clickable" id="toggleText2">About</h1>
+                    <p1 class="subtitle pb-0" id="hiddenText1">
+                        Hello tech world, I'm known as <strong>Eun</strong>. 
+                    </p1>
+                    <p1 class="subtitle" id="hiddenText2">
+                        Currently, I'm on an exciting learning journey in the field of Information Technology, where I've had the opportunity to acquire essential insights concerning tech that have simultaneously helped me acquire important skills.
+                    </p1>
+                    <p1 class="subtitle pb-2" id="hiddenText3">
+                        I am driven with interest to technology, and I believe in the great potential that technological innovations can offer to us, and I'm committed to extending my tech skills where ever it may reach.
+                    </p1>
+                    <p1 class="subtitle pb-2" id="hiddenText4">
+                        I'm always up for friendly and productive discussions, so feel free to reach out! Let's learn more in tech and explore opportunities within the industry.
+                    </p1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-flex is-justify-content-center">
+                <!-- left -->
+                <div class="column">
+                    <!-- education -->
+                    <h1 class="title">Education</h1>
+
+                    <div class="is-flex is-flex-direction-column">
+                        <h1 class="is-size-3 has-text-weight-bold pb-0">Ateneo de Davao University</h1>
+                        <p class="is-size-8 pt-0">Present</p>
+                    </div>
+                    <div class="is-flex is-flex-direction-column ml-6 mt-2">
+                        <ul class="list-disc">
+                            <li class="is-size-5 has-text-weight-medium">Bachelor of Science in Information Technology</li>
+                            <li class="is-size-5 has-text-weight-medium">IT Elective in Cybersecurity</li>
+                        </ul>
+                    </div>
+                    <br>
+
+                    <div class="is-flex is-flex-direction-column">
+                        <h1 class="is-size-3 has-text-weight-bold pb-0">Ateneo de Davao University</h1>
+                        <p class="is-size-8 pt-0">(Senior High School) 2022</p>
+                    </div>
+                    <div class="is-flex is-flex-direction-column ml-6 mt-2">
+                        <p class="is-size-5 has-text-weight-medium">Pre-Computer Studies</p>
+                    </div>
+                    <br>
+
+                    
+                    
+
+                    <!-- skills -->
+                    <div>
+                        <h1 class="title">Skills</h1>
+                    </div>
+                </div>
+
+                <!-- right -->
+                <div class="column">
+                    <h1 class="title">Projects</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jscript area -->
+    <script>
+        const toggleText2 = document.getElementById('toggleText2');
+        const hiddenText1 = document.getElementById('hiddenText1');
+        const hiddenText2 = document.getElementById('hiddenText2');
+        const hiddenText3 = document.getElementById('hiddenText3');
+        const hiddenText4 = document.getElementById('hiddenText4');
+
+        toggleText2.addEventListener('click', function() {
+        hiddenText1.classList.toggle('hidden');
+        hiddenText2.classList.toggle('hidden');
+        hiddenText3.classList.toggle('hidden');
+        hiddenText4.classList.toggle('hidden');
+
+        // Change the text of notify based on visibility of texts
+        if (hiddenText1.classList.contains('hidden')) {
+            notify.textContent = "Click to unhide me!";
+        } else {
+            notify.textContent = "Click to hide me!";
+        }
+        });
+    </script>
     <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
