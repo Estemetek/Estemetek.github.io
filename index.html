@@ -99,50 +99,73 @@
         </div>
     </section>
 
-
+    <br>
+    <div class="has-text-centered is-justify-content-center">
+        <p class="subtitle has-text-weight-bold">My Tech Journey So Far:</p>
+    </div>
+    
     <section class="section">
-        <div class="container">
-            <div class="columns is-flex is-justify-content-center">
-                <!-- left -->
-                <div class="column">
-                    <!-- education -->
-                    <h1 class="title">Education</h1>
+        <div class="columns is-flex is-justify-content-center has-text-centered">
+            <!-- Education -->
+            <div class="column">
+                <div class="box is-clickable title" id="toggleEducation">Education</div>
+            </div>
 
-                    <div class="is-flex is-flex-direction-column">
-                        <h1 class="is-size-3 has-text-weight-bold pb-0">Ateneo de Davao University</h1>
-                        <p class="is-size-8 pt-0">Present</p>
-                    </div>
-                    <div class="is-flex is-flex-direction-column ml-6 mt-2">
-                        <ul class="list-disc">
-                            <li class="is-size-5 has-text-weight-medium">Bachelor of Science in Information Technology</li>
-                            <li class="is-size-5 has-text-weight-medium">IT Elective in Cybersecurity</li>
-                        </ul>
-                    </div>
-                    <br>
+            <!-- Skills -->
+            <div class="column">
+                <div class="box is-clickable title" id="toggleSkills">Skills</div>
+            </div>
 
-                    <div class="is-flex is-flex-direction-column">
-                        <h1 class="is-size-3 has-text-weight-bold pb-0">Ateneo de Davao University</h1>
-                        <p class="is-size-8 pt-0">(Senior High School) 2022</p>
-                    </div>
-                    <div class="is-flex is-flex-direction-column ml-6 mt-2">
-                        <p class="is-size-5 has-text-weight-medium">Pre-Computer Studies</p>
-                    </div>
-                    <br>
+            <!-- Projects -->
+            <div class="column">
+                <div class="box is-clickable title" id="toggleProjects">Projects</div>
+            </div>
+        </div>
+    </section>
 
-                    
-                    
-
-                    <!-- skills -->
-                    <div>
-                        <h1 class="title">Skills</h1>
+    <section class="section is-flex is-justify-content-center">
+        <!-- education content -->
+        <div class="hidden" id="hiddenEducation">
+            <div class="is-flex is-flex-direction-column">
+                <div class="list-item is-flex is-flex-direction-row is-narrow">
+                    <div class="list-item-image">
+                        <figure class="image is-64x64">
+                          <img class="is-rounded" src="https://upload.wikimedia.org/wikipedia/en/6/64/Ateneo_de_Davao_University_logo.png">
+                        </figure>
+                      </div>
+                  
+                      <div class="list-item-content ml-3">
+                        <div class="list-item-title is-size-3 has-text-weight-bold pb-0">Ateneo de Davao University</div>
+                        <p class="is-size-9 pt-0">Present</p>
+                        <div class="list-item-description is-size-5 has-text-weight-medium ml-4">💻Bachelor of Science in Information Technology</div>
+                        <div class="list-item-description is-size-5 has-text-weight-medium ml-4">🛡️IT Elective in Cybersecurity</div>
+                      </div>
                     </div>
                 </div>
-
-                <!-- right -->
-                <div class="column">
-                    <h1 class="title">Projects</h1>
+                <br>
+                <div class="list-item is-flex is-flex-direction-row is-narrow">
+                    <div class="list-item-image">
+                        <figure class="image is-64x64">
+                          <img class="is-rounded" src="https://upload.wikimedia.org/wikipedia/en/6/64/Ateneo_de_Davao_University_logo.png">
+                        </figure>
+                      </div>
+                  
+                      <div class="list-item-content ml-3">
+                        <div class="list-item-title is-size-3 has-text-weight-bold pb-0">Ateneo de Davao University</div>
+                        <p class="is-size-9 pt-0">(Senior High School) 2022</p>
+                        <div class="list-item-description is-size-5 has-text-weight-medium ml-4">💻Pre-Computer Studies</div>
+                      </div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <!-- skills content -->
+        <div class="hidden" id="hiddenSkills">
+            <p>hatdog</p>
+        </div>
+        <!-- projects content -->
+        <div class="hidden" id="hiddenProjects">
+            <p>weeee</p>
         </div>
     </section>
 
@@ -166,6 +189,28 @@
         } else {
             notify.textContent = "Click to hide me!";
         }
+        });
+
+        // education
+        const toggleEducation = document.getElementById('toggleEducation');
+        const hiddenEducation = document.getElementById('hiddenEducation');
+
+        toggleEducation.addEventListener('click', function() {
+        hiddenEducation.classList.toggle('hidden');
+        });
+        // skills
+        const toggleSkills = document.getElementById('toggleSkills');
+        const hiddenSkills = document.getElementById('hiddenSkills');
+
+        toggleSkills.addEventListener('click', function() {
+        hiddenSkills.classList.toggle('hidden');
+        });
+        // projects
+        const toggleProjects = document.getElementById('toggleProjects');
+        const hiddenProjects = document.getElementById('hiddenProjects');
+
+        toggleProjects.addEventListener('click', function() {
+        hiddenProjects.classList.toggle('hidden');
         });
     </script>
     <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
