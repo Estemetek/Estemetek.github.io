@@ -39,17 +39,12 @@
                     Reach me through:
                 </div>
                 <div class="is-flex is-flex-direction-row">
-                    <a class="button is-medium is-facebook">
-                        <span class="icon">
-                          <i class="fab fa-facebook fa-lg"></i>
-                        </span>
-                    </a>
                     <a href="https://github.com/Estemetek" target="_blank" class="button is-medium is-github">
                         <span class="icon">
                           <i class="fab fa-github fa-lg"></i>
                         </span>
                     </a>
-                    <a class="button is-medium is-instagram">
+                    <a href="https://www.instagram.com/eunaest/" class="button is-medium is-instagram">
                         <span class="icon">
                           <i class="fab fa-instagram fa-lg"></i>
                         </span>
@@ -59,14 +54,14 @@
                           <i class="fab fa-linkedin fa-lg"></i>
                         </span>
                     </a>
-                    <a class="button is-medium is-slack">
+                    <a href="" class="button is-medium is-slack">
                         <span class="icon">
                           <i class="fab fa-slack fa-lg"></i>
                         </span>
                     </a>
-                    <a class="button is-medium is-dropbox">
+                    <a href="" class="button is-medium is-white">
                         <span class="icon">
-                          <i class="fab fa-dropbox fa-lg"></i>
+                          <image src="https://www.logo.wine/a/logo/Gmail/Gmail-Logo.wine.svg" style="width: 24px; height: 24px;"></image>
                         </span>
                     </a>
                 </div>
@@ -161,11 +156,54 @@
         </div>
         <!-- skills content -->
         <div class="hidden" id="hiddenSkills">
-            <p>hatdog</p>
+            <div class="is-flex is-flex-direction-column">
+                <div class="list-item is-flex is-flex-direction-row is-narrow">
+                    <div class="list-item-image">
+                        <figure class="image is-64x64">
+                            <img class="is-rounded" src="https://cdn.iconscout.com/icon/free/png-512/free-python-3521655-2945099.png?f=webp&w=256">
+                          </figure>
+                        </div>
+                    
+                        <div class="list-item-content ml-3">
+                          <div class="list-item-title is-size-3 has-text-weight-bold pb-0">Python</div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="list-item is-flex is-flex-direction-row is-narrow">
+                    <div class="list-item-image">
+                        <figure class="image is-64x64">
+                          <img class="is-rounded" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png?20120221235433">
+                        </figure>
+                      </div>
+                  
+                      <div class="list-item-content ml-3">
+                        <div class="list-item-title is-size-3 has-text-weight-bold pb-0">JavaScript</div>
+                      </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- projects content -->
         <div class="hidden" id="hiddenProjects">
-            <p>weeee</p>
+            <div class="is-flex is-flex-direction-column">
+                <div class="list-item is-flex is-flex-direction-row is-narrow">
+                    <div class="list-item-image">
+                        <figure class="image is-64x64">
+                            <img class="is-rounded" src="https://www.ivolunteer.com.ph/storage/logo_images/zpFXS4Xxei1RIR65qHrEzzNo9c0CN7eu5USprZfp.png">
+                          </figure>
+                        </div>
+                    
+                        <div class="list-item-content ml-3">
+                          <div class="list-item-title is-size-3 has-text-weight-bold pb-0">Davao Durians Rugby Landing Page</div>
+                          <p class="is-size-9 pt-0">May 2023</p>
+                          <div class="list-item-description is-size-5 has-text-weight-light ml-4">
+                            A landing page dedicated to showcase client's Rugby team situated in Davao City. This design project was an accomplished requirement under the BS in Information Technology course, Human-Computer Interaction.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -191,27 +229,38 @@
         }
         });
 
-        // education
+        // Get all toggle buttons
         const toggleEducation = document.getElementById('toggleEducation');
-        const hiddenEducation = document.getElementById('hiddenEducation');
-
-        toggleEducation.addEventListener('click', function() {
-        hiddenEducation.classList.toggle('hidden');
-        });
-        // skills
         const toggleSkills = document.getElementById('toggleSkills');
-        const hiddenSkills = document.getElementById('hiddenSkills');
-
-        toggleSkills.addEventListener('click', function() {
-        hiddenSkills.classList.toggle('hidden');
-        });
-        // projects
         const toggleProjects = document.getElementById('toggleProjects');
+
+        // Get all hidden content sections
+        const hiddenEducation = document.getElementById('hiddenEducation');
+        const hiddenSkills = document.getElementById('hiddenSkills');
         const hiddenProjects = document.getElementById('hiddenProjects');
 
-        toggleProjects.addEventListener('click', function() {
-        hiddenProjects.classList.toggle('hidden');
-        });
+        // Function to hide all hidden content sections
+        function hideAllHiddenContent() {
+            hiddenEducation.classList.add('hidden');
+            hiddenSkills.classList.add('hidden');
+            hiddenProjects.classList.add('hidden');
+        }
+
+        // Function to handle toggle click event
+        function handleToggleClick(toggleButton, hiddenContent) {
+            toggleButton.addEventListener('click', function() {
+                // Hide all hidden content sections
+                hideAllHiddenContent();
+
+                // Toggle the specific hidden content section
+                hiddenContent.classList.toggle('hidden');
+            });
+        }
+
+        // Add click event listeners to toggle buttons
+        handleToggleClick(toggleEducation, hiddenEducation);
+        handleToggleClick(toggleSkills, hiddenSkills);
+        handleToggleClick(toggleProjects, hiddenProjects);
     </script>
     <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
