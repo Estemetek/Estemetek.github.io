@@ -21,177 +21,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
     
-    <style>
-        :root {
-            --accent-color: #1e7a47;
-        }
-
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                        url('bg.jpg'); 
-            background-size: cover;
-            background-position: center;
-        }
-
-        .hero .button.is-outlined {
-            color: #1e7a47;
-            border-color: #1e7a47;
-        }
-
-        .hero .button.is-outlined:hover {
-            background-color: rgba(30, 122, 71, 0.12);
-        }
-
-        .hero .button.is-link {
-            background-color: #1e7a47;
-            border-color: #1e7a47;
-        }
-
-        .hero .button.is-link:hover {
-            background-color: #155c36;
-        }
-
-        .project-image-container img {
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            margin-top: 15px;
-        }
-
-        .section-header {
-            padding: 1.25rem 1.5rem;
-            border-left: 5px solid var(--accent-color);
-            background-color: #edf7f1;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 1.5rem;
-        }
-
-        .section-header .title {
-            color: #0f3d22;
-            margin-bottom: 0.15rem !important;
-        }
-
-        .section-header .section-tagline {
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--accent-color);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin: 0;
-        }
-
-        .profile-photo {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid rgba(255, 255, 255, 0.2);
-            max-width: 100%;
-        }
-        .hero-about {
-            max-width: 640px;
-            margin: 0 auto;
-            border-top: 1px solid rgba(255, 255, 255, 0.15); 
-            padding-top: 2rem;
-            margin-top: 2rem;
-        }
-        .hero-about p {
-            color: rgba(255, 255, 255, 0.925); 
-            font-size: 1rem;
-            line-height: 1.8;
-        }
-        .hero figure.image.is-inline-block {
-            width: 500px;   
-            height: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .footer {
-            background-color: #185a35;
-            padding: 3rem 1.5rem;
-        }
-
-        .footer-tagline {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            margin-bottom: 1.25rem;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap; 
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-links .button {
-            border-color: rgba(255, 255, 255, 0.4);
-            color: #fff;
-            background: transparent;
-        }
-
-        .footer-links .button:hover {
-            background-color: rgba(255, 255, 255, 0.12);
-            border-color: rgba(255, 255, 255, 0.7);
-            color: #fff;
-        }
-
-        .footer-divider {
-            border: none;
-            border-top: 1px solid rgba(255, 255, 255, 0.15);
-            margin: 0 0 1.25rem;
-        }
-
-        .footer-copy {
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.8rem;
-            margin: 0;
-        }
-
-        /* ---- mobile responsiveness ---- */
-        @media screen and (max-width: 768px) {
-
-            .hero .title.is-1 {
-                font-size: 2rem;
-            }
-
-            .hero .subtitle.is-4 {
-                font-size: 1.1rem;
-            }
-
-            .hero .buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .hero .buttons .button {
-                width: 200px;   
-            }
-
-            .section-header {
-                padding: 1rem 1rem;
-            }
-
-            .section-header .title.is-3 {
-                font-size: 1.4rem;
-            }
-
-            .hero-about p {
-                font-size: 0.95rem;
-                line-height: 1.7;
-            }
-
-        }
-
-        /* Section banner hooks */
-        #educationSection .section-header { }
-        #skillsSection    .section-header { }
-        #projectsSection  .section-header { }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section class="hero is-medium is-dark">
@@ -203,7 +33,7 @@
                     <img class="profile-photo" src="selfpic.jpg" alt="Eunice Estimada">
                 </figure>
                 <h1 class="title is-1">Eunice Mekhaela Estimada</h1>
-                <p class="subtitle is-4">Aspiring Cybersecurity Analyst & IT Professional</p>
+                <p class="subtitle is-4">Aspiring IT Professional</p>
 
                 <div class="buttons is-centered">
                     <a href="https://github.com/Estemetek" target="_blank" class="button is-dark is-outlined">
@@ -244,14 +74,31 @@
                 <h2 class="title is-3">Education</h2>
                 <p class="section-tagline">Academic background & certifications</p>
             </div>
-            <div class="box">
-                <p class="title is-5">BS in Information Technology</p>
-                <p class="subtitle is-6">Ateneo de Davao University | <em>Present</em></p>
-                <ul>
-                    <li><strong>Cybersecurity (Cisco):</strong> 6-course series in Threat Management and Network Defense; practiced via VM labs.</li>
-                    <li><strong>Networking I & II (Cisco):</strong> Proficient in Routing/Switching, LAN/WAN, and Packet Tracer hardware configurations.</li>
-                </ul>
+
+            <div class="edu-entry">
+                <div>
+                    <p class="edu-title">BS in Information Technology</p>
+                    <p class="edu-sub">Ateneo de Davao University</p>
+                </div>
+                <span class="edu-date">Present</span>
             </div>
+
+            <div class="edu-entry">
+                <div>
+                    <p class="edu-title">Cybersecurity — Cisco SkillsforAll</p>
+                    <p class="edu-sub">6-course series · Threat Management & Network Defense</p>
+                </div>
+                <span class="edu-date">Certified</span>
+            </div>
+
+            <div class="edu-entry">
+                <div>
+                    <p class="edu-title">Networking I & II — Cisco SkillsforAll</p>
+                    <p class="edu-sub">Routing/Switching · LAN/WAN · Packet Tracer</p>
+                </div>
+                <span class="edu-date">Certified</span>
+            </div>
+
         </div>
     </section>
 
@@ -261,25 +108,42 @@
             <div class="section-header mb-5">
                 <h2 class="title is-3">Skills</h2>
                 <p class="section-tagline">Tools & technical proficiencies</p>
-                <hr>
             </div>
-            <div class="columns is-multiline is-mobile">
-                <div class="column is-half-mobile is-one-quarter-desktop has-text-centered">
-                    <span class="icon is-large has-text-primary"><i data-lucide="code-2" style="width:48px;height:48px"></i></span>
-                    <p>Python</p>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <div class="skill-icon-wrap" style="background: #edf7f1;">
+                        <i data-lucide="code-2" style="width:26px;height:26px;stroke:#1e7a47;"></i>
+                    </div>
+                    <p class="skill-name">Python</p>
+                    <p class="skill-sub">Scripting</p>
                 </div>
-                <div class="column is-half-mobile is-one-quarter-desktop has-text-centered">
-                    <span class="icon is-large has-text-warning"><i data-lucide="braces" style="width:48px;height:48px"></i></span>
-                    <p>JavaScript</p>
+
+                <div class="skill-card">
+                    <div class="skill-icon-wrap" style="background: #fffbf0;">
+                        <i data-lucide="braces" style="width:26px;height:26px;stroke:#b87c00;"></i>
+                    </div>
+                    <p class="skill-name">JavaScript</p>
+                    <p class="skill-sub">Frontend</p>
                 </div>
-                <div class="column is-half-mobile is-one-quarter-desktop has-text-centered">
-                    <span class="icon is-large has-text-info"><i data-lucide="globe" style="width:48px;height:48px"></i></span>
-                    <p>WordPress</p>
+
+                <div class="skill-card">
+                    <div class="skill-icon-wrap" style="background: #edf3ff;">
+                        <i data-lucide="globe" style="width:26px;height:26px;stroke:#3366cc;"></i>
+                    </div>
+                    <p class="skill-name">WordPress</p>
+                    <p class="skill-sub">CMS</p>
                 </div>
-                <div class="column is-half-mobile is-one-quarter-desktop has-text-centered">
-                    <span class="icon is-large has-text-danger"><i data-lucide="pen-tool" style="width:48px;height:48px"></i></span>
-                    <p>Figma (UI/UX)</p>
+
+                <div class="skill-card">
+                    <div class="skill-icon-wrap" style="background: #fff0f3;">
+                        <i data-lucide="pen-tool" style="width:26px;height:26px;stroke:#cc3355;"></i>
+                    </div>
+                    <p class="skill-name">Figma</p>
+                    <p class="skill-sub">UI/UX Design</p>
                 </div>
+
             </div>
         </div>
     </section>
@@ -293,37 +157,109 @@
             </div>
 
             <div class="box">
+                <h4 class="title is-5">Taiwan Fried Kitchen | POS System</h4>
+                <p>Co-developed a point-of-sale system for a local restaurant - Taiwan Fried Kitchen. The system includes </p>
+                <div class="tag-list">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Next.js</span>
+                    <span class="tech-tag">Tailwind CSS</span>
+                    <span class="tech-tag">Supabase</span>
+                </div>
+                <div class="project-gallery">
+                    <a href="tfk-login.PNG" target="_blank" rel="noopener noreferrer">
+                        <img src="tfk-login.PNG" alt="Taiwan Fried Kitchen login" loading="lazy">
+                    </a>
+                    <a href="tfk-dashboard.png" target="_blank" rel="noopener noreferrer">
+                        <img src="tfk-dashboard.png" alt="Taiwan Fried Kitchen dashboard" loading="lazy">
+                    </a>
+                    <a href="tfk-menu.PNG" target="_blank" rel="noopener noreferrer">
+                        <img src="tfk-menu.PNG" alt="Taiwan Fried Kitchen menu" loading="lazy">
+                    </a>
+                    <a href="tfk-accounts.PNG" target="_blank" rel="noopener noreferrer">
+                        <img src="tfk-accounts.PNG" alt="Taiwan Fried Kitchen accounts" loading="lazy">
+                    </a>
+                    <a href="tfk-inventory.PNG" target="_blank" rel="noopener noreferrer">
+                        <img src="tfk-inventory.PNG" alt="Taiwan Fried Kitchen inventory" loading="lazy">
+                    </a>
+                    <a href="tfk-reports.PNG" target="_blank" rel="noopener noreferrer">
+                        <img src="tfk-reports.PNG" alt="Taiwan Fried Kitchen reports" loading="lazy">
+                    </a>
+                    <a href="tfk-orders.png" target="_blank" rel="noopener noreferrer">
+                        <img src="tfk-orders.png" alt="Taiwan Fried Kitchen orders" loading="lazy">
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="box">
                 <h4 class="title is-5">BrightAid | Blockchain Capstone</h4>
-                <p>Developed a transparent donation tracking system using <strong>Hyperledger Fabric</strong> blockchain technology and <strong>Node.js</strong>. 
-                    Integrated QR code scanning and web querying for audit trailing of donated educational assets.</p>
-                <button class="button is-small is-light mt-2 sneak-btn" data-target="sneak1">View Gallery</button>
-                <div id="sneak1" class="is-hidden project-image-container">
-                    <img src="capstonehome.png"
-                        style="width:150px" alt="BrightAid Home Page"
-                        loading="lazy">
+                <p>Developed a transparent donation tracking system using <strong>Hyperledger Fabric</strong>
+                    blockchain technology and <strong>Node.js</strong>. Integrated QR code scanning and
+                    web querying for audit trailing of donated educational assets.</p>
+                <div class="tag-list">
+                    <span class="tech-tag">Hyperledger Fabric</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">QR Code</span>
+                    <span class="tech-tag">Blockchain</span>
+                </div>
+                <div class="project-gallery">
+                    <a href="capstonehome.png" target="_blank" rel="noopener noreferrer">
+                        <img src="capstonehome.png" alt="BrightAid home page" loading="lazy">
+                    </a>
+                    <a href="capstonesignin.png" target="_blank" rel="noopener noreferrer">
+                        <img src="capstonesignin.png" alt="BrightAid sign-in page" loading="lazy">
+                    </a>
+                    <a href="capstoneadddonation.png" target="_blank" rel="noopener noreferrer">
+                        <img src="capstoneadddonation.png" alt="BrightAid add donation page" loading="lazy">
+                    </a>
+                    <a href="capstonethankyou.png" target="_blank" rel="noopener noreferrer">
+                        <img src="capstonethankyou.png" alt="BrightAid thank you page" loading="lazy">
+                    </a>
                 </div>
             </div>
 
             <div class="box">
                 <h4 class="title is-5">CSSEC Official Website</h4>
-                <p>Designed and deployed a live WordPress environment for the Computer Studies Student Executive Council (CSSEC) of the University. Focused on information architecture and administrative efficiency through the use of WordPress plugins.</p>
-                <button class="button is-small is-light mt-2 sneak-btn" data-target="sneak2">View Gallery</button>
-                <div id="sneak2" class="is-hidden project-image-container">
-                    <img src="wordpress-image.png"
-                        style="width:100%" alt="CSSEC WordPress Site"
-                        loading="lazy">
+                <p>Designed and deployed a live WordPress environment for the Computer Studies Student
+                    Executive Council (CSSEC) of the University. Focused on information architecture
+                    and administrative efficiency through the use of WordPress plugins.</p>
+                <div class="tag-list">
+                    <span class="tech-tag">WordPress</span>
+                    <span class="tech-tag">UI Architecture</span>
+                    <span class="tech-tag">Plugins</span>
+                </div>
+                <div class="project-gallery">
+                    <a href="wordpress-image.png" target="_blank" rel="noopener noreferrer">
+                        <img src="wordpress-image.png" alt="CSSEC WordPress site" loading="lazy">
+                    </a>
+                    <a href="cssec-committees.png" target="_blank" rel="noopener noreferrer">
+                        <img src="cssec-committees.png" alt="CSSEC committees page" loading="lazy">
+                    </a>
+                    <a href="cssec-calendar.png" target="_blank" rel="noopener noreferrer">
+                        <img src="cssec-calendar.png" alt="CSSEC calendar page" loading="lazy">
+                    </a>
+                    <a href="cssec-aboutus.png" target="_blank" rel="noopener noreferrer">
+                        <img src="cssec-aboutus.png" alt="CSSEC about us page" loading="lazy">
+                    </a>
                 </div>
             </div>
 
             <div class="box">
                 <h4 class="title is-5">Agile Project Manager | Davao Rugby Landing Page</h4>
-                <p>Led a 3-person team using <strong>Agile methodology</strong>. Conducted a UI/UX design project in Figma and managed task prioritization via Trello for a 
-                    professional client in requirement of the program's Human Computer Interaction (HCI) course.</p>
-                <button class="button is-small is-light mt-2 sneak-btn" data-target="sneak3">View Gallery</button>
-                <div id="sneak3" class="is-hidden project-image-container">
-                    <img src="davaodurianshome.png"
-                        style="width:100%" alt="Davao Rugby Landing Page"
-                        loading="lazy">
+                <p>Led a 3-person team using <strong>Agile methodology</strong>. Conducted a UI/UX
+                    design project in Figma and managed task prioritization via Trello for a
+                    professional client in requirement of the program's Human Computer Interaction
+                    (HCI) course.</p>
+                <div class="tag-list">
+                    <span class="tech-tag">Figma</span>
+                    <span class="tech-tag">Agile</span>
+                    <span class="tech-tag">Trello</span>
+                    <span class="tech-tag">HCI</span>
+                </div>
+                <div class="project-gallery">
+                    <a href="davaodurianshome.png" target="_blank" rel="noopener noreferrer">
+                        <img src="davaodurianshome.png" alt="Davao Rugby landing page" loading="lazy">
+                    </a>
                 </div>
             </div>
 
@@ -364,16 +300,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             lucide.createIcons();
-
-            const sneakBtns = document.querySelectorAll('.sneak-btn');
-            sneakBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const targetId = btn.getAttribute('data-target');
-                    const targetImg = document.getElementById(targetId);
-                    targetImg.classList.toggle('is-hidden');
-                    btn.textContent = targetImg.classList.contains('is-hidden') ? 'View Gallery' : 'Hide Gallery';
-                });
-            });
         });
     </script>
 </body>
